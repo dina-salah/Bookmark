@@ -1,12 +1,14 @@
-body{
+body {
     margin: 0;
     background-color: #F7ECDE;
-    
+
 }
-::selection{
+
+::selection {
     background-color: #FEC260;
 }
-.header-subj{
+
+.header-subj {
     font-family: "Pacifico", cursive;
     font-weight: 500;
     font-size: 50px;
@@ -14,7 +16,8 @@ body{
     border-bottom: dotted black 2px;
     position: relative;
 }
-.header-subj:after{
+
+.header-subj:after {
     content: '';
     position: absolute;
     width: 270px;
@@ -25,10 +28,39 @@ body{
     z-index: -10;
     transition: 0.5s;
 }
- .header-subj:hover:after{
+
+.header-subj:hover:after {
     content: '';
     position: absolute;
-   
+
     height: 40px;
-    
+
+}
+
+h2 {
+    font-family: "Righteous", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    font-style: normal;
+    background: linear-gradient(to right, rgb(66, 141, 86), #dfd243);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 4px #fec26055;
+    border-color: #D99C39;
+    outline: 0;
+}
+
+.form-control {
+    height: 40px;
+}
+
+.form {
+    border-bottom: dotted 2px black;
+}
+
+table {
+    vertical-align: middle !important;
 }
