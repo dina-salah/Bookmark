@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    background-color: #F7ECDE;
+    
+}
+::selection{
+    background-color: #FEC260;
+}
+.header-subj{
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-size: 50px;
+    font-style: normal;
+    border-bottom: dotted black 2px;
+    position: relative;
+}
+.header-subj:after{
+    content: '';
+    position: absolute;
+    width: 270px;
+    height: 20px;
+    background-color: #FEC260;
+    transform: translateX(-100%);
+    bottom: 50px;
+    z-index: -10;
+    transition: 0.5s;
+}
+ .header-subj:hover:after{
+    content: '';
+    position: absolute;
+   
+    height: 40px;
+    
+}
