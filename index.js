@@ -3,6 +3,7 @@ var websiteURL = document.getElementById("websiteURL");
 var submitBtn = document.getElementById("submitBtn");
 var VisitBtn = document.getElementById("VisitBtn");
 var DeleteBtn = document.getElementById("DeleteBtn");
+var modalpopbox = new bootstrap.Modal(document.getElementById("popBox"));
 
 var websiteslist = [];
 
@@ -33,21 +34,8 @@ function insert() {
   else {
     clearForm();
     console.log('popbox should be fixed')
-    //   modal = `<div class="modal" tabindex="-1">
-    //   <div class="modal-dialog">
-    //     <div class="modal-content">
-    //       <div class="modal-header">
-    //       <h4>Site Name or Url is not valid, Please follow the rules below :</h4>
-    //         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    //       </div>
-    //       <div class="modal-body">
-    //         <p><i class="me-2 fa-solid fa-circle-arrow-right"></i>Site name must contain at least 3 characters</p>
-    //         <p><i class="me-2 fa-solid fa-circle-arrow-right"></i>Site URL must be a valid one</p>
-    //       </div>
+    modalpopbox.show()
 
-    //     </div>
-    //   </div>
-    // </div>`
   }
 
 

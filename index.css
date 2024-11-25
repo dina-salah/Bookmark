@@ -64,3 +64,19 @@ h2 {
 table {
     vertical-align: middle !important;
 }
+
+.modal-circle {
+    width: 22px;
+    height: 22px;
+}
+
+.modal-body h5 {
+    font-size: 21px;
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+}
+
+.modal-body p {
+    font-weight: 400;
+    font-size: 18px;
+}
