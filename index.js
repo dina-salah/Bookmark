@@ -6,6 +6,8 @@ var DeleteBtn = document.getElementById("DeleteBtn");
 var modalpopbox = new bootstrap.Modal(document.getElementById("popBox"));
 
 var websiteslist = [];
+const regex = /^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-./?%&=]*)?$/;
+ 
 
 if (localStorage.getItem('webhis') !== null) {
   websiteslist = JSON.parse(localStorage.getItem('webhis'));
@@ -24,8 +26,8 @@ function insert() {
   };
 
 
-  if ((web.name).length >= 3 && (web.url == `www.${web.name}.com` || web.url == `https://www.${web.name}.com` || web.url == `http://www.${web.name}.com`)) {
-    websiteslist.push(web);
+  if(regex.test(web.url) && (web.name).length >= 3){
+  websiteslist.push(web);
     clearForm();
     localStorage.setItem('webhis', JSON.stringify(websiteslist));
     display();
